@@ -1,18 +1,37 @@
-<div id="adobe-dc-view" style="height: 360px; width: 500px;"></div>
-<script src="https://documentcloud.adobe.com/view-sdk/viewer.js"></script>
-<script type="text/javascript">
-  document.addEventListener("adobe_dc_view_sdk.ready", function(){
-    var adobeDCView = new AdobeDC.View({ clientId: "d52e664ec04a4d28be57e82c246fddbe", divId: "adobe-dc-view" });
-    adobeDCView.previewFile({
-      content: { 
-        location: { 
-          url: "https://matheuscog.github.io/certificados/curso-tecnico.pdf" 
-        }
-      },
-      metaData: { fileName: "Certificado - Curso técnico.pdf" }
-    },
-    {
-      embedMode: "SIZED_CONTAINER"
-    });
-  });
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Certificado - Curso técnico</title>
+      <meta charset="utf-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+      <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body style="margin: 0px">
+      <div id="adobe-dc-view"></div>
+      <script src="https://documentcloud.adobe.com/view-sdk/viewer.js"></script>
+      <script type="text/javascript">
+        const viewerConfig = {
+            /* Allowed possible values are "FIT_PAGE", "FIT_WIDTH", "TWO_COLUMN", "TWO_COLUMN_FIT_PAGE" or "". */
+            defaultViewMode: "",
+        };
+
+        document.addEventListener("adobe_dc_view_sdk.ready", function () {
+            var adobeDCView = new AdobeDC.View({
+                clientId: "d52e664ec04a4d28be57e82c246fddbe",
+                divId: "adobe-dc-view",
+            });
+
+            adobeDCView.previewFile({
+                content: {
+                    location: {
+                        url: "https://matheuscog.github.io/certificados/curso-tecnico.pdf",
+                    },
+                },
+                metaData: {
+                    fileName: "Certificado - Curso técnico.pdf"
+                }
+            }, viewerConfig);
+        });
+      </script>
+  </body>
+</html>
