@@ -1,32 +1,31 @@
-<object data="https://matheuscog.github.io/certificados/" type="application/pdf" style="min-height:100vh;width:100%"></object>
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>Certificado - Tecnologia em Hardware e Redes</title>
-      <meta charset="utf-8"/>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-      <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
-  </head>
-  <body style="margin: 0px">
-      <div id="adobe-dc-view"></div>
-      <script src="https://documentcloud.adobe.com/view-sdk/viewer.js"></script>
-      <script type="text/javascript">
-        const viewerConfig = { defaultViewMode: "" };
-        document.addEventListener("adobe_dc_view_sdk.ready", function () {
-            var adobeDCView = new AdobeDC.View({
-                clientId: "d52e664ec04a4d28be57e82c246fddbe",
-                divId: "adobe-dc-view",
-            });
+    <head>
+        <title>Certificado - Tecnologia em Hardware e Redes</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+    <body style="margin: 0px">
+        <div id="adobe-dc-view"></div>
+        <script src="https://documentcloud.adobe.com/view-sdk/viewer.js"></script>
+        <script type="text/javascript">
+            const viewerConfig = { defaultViewMode: "" };
+            document.addEventListener("adobe_dc_view_sdk.ready", function () {
+                var adobeDCView = new AdobeDC.View({
+                    clientId: "d52e664ec04a4d28be57e82c246fddbe",
+                    divId: "adobe-dc-view",
+                });
 
-            adobeDCView.previewFile({
-                content: {
-                    location: { url: "https://matheuscog.github.io/certificados/Certificado-Tecnologia-em-Hardware-e-Redes.pdf" }
-                },
-                metaData: {
-                    fileName: "Certificado - Tecnologia em Hardware e Redes.pdf"
-                }
-            }, viewerConfig);
-        });
-      </script>
-  </body>
+                adobeDCView.previewFile({
+                    content: {
+                        location: { url: "https://matheuscog.github.io/certificados/docs/Certificado-Tecnologia-em-Hardware-e-Redes.pdf" }
+                    },
+                    metaData: {
+                        fileName: "Certificado - Tecnologia em Hardware e Redes.pdf"
+                    }
+                }, viewerConfig);
+            });
+        </script>
+    </body>
 </html>
